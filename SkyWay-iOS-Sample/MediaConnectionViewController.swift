@@ -178,7 +178,8 @@ class MediaConnectionViewController: UIViewController, UINavigationControllerDel
         btnCall.frame = rcCall
         btnCall.setTitle("Call to", for: UIControlState.normal)
         btnCall.backgroundColor = UIColor.lightGray
-        btnCall.addTarget(self, action: #selector(self.onTouchUpInside(_:)), for: UIControlEvents.touchUpInside)
+        /*btnCall.addTarget(self, action: #selector(self.onTouchUpInside(_:)), for: UIControlEvents.touchUpInside)*/
+        btnCall.addTarget(self, action: #selector(self.callingTo(strDestId:)), for: UIControlEvents.touchUpInside)
 
         self.view.addSubview(btnCall)
 
